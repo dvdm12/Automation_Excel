@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="850.4,1145.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="850.4,906.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -43,6 +43,9 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -108,9 +111,10 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="608,1080.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="608,841.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="srtDollar" />
       <Variable x:TypeArguments="x:String" Name="srtEuro" />
@@ -121,7 +125,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="GoingToCUEX" sap:VirtualizedContainerService.HintSize="545.6,992" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="5179f81b-96d1-454a-b691-ab6287c85a36" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="CUEX" sap:VirtualizedContainerService.HintSize="545.6,64.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="5179f81b-96d1-454a-b691-ab6287c85a36" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -247,6 +251,87 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Firefox" IconBase64="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" InformativeScreenshot="cce73962f3d93cefd9a06975068f18b6.png" Selector="&lt;html app='firefox.exe' title='Conversor de moneda - CUEX' /&gt;" Title="(1167) How to OPEN BROWSER in UiPath| UiPath Open Browser Example - YouTube" Url="https://cuex.com/es/usd-cop" />
       </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="545.6,688" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,578.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="449.6,492" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Excel\\Result.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Dollar" sap:VirtualizedContainerService.HintSize="353.6,64.8" sap2010:WorkflowViewState.IdRef="WriteCellX_1">
+                      <ueab:WriteCellX.Cell>
+                        <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                          <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">Excel.Sheet["Hoja1"].Cell["A1"]</CSharpValue>
+                        </InArgument>
+                      </ueab:WriteCellX.Cell>
+                      <ueab:WriteCellX.Value>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">"Dollar Value: "+ srtDollar</CSharpValue>
+                        </InArgument>
+                      </ueab:WriteCellX.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:WriteCellX>
+                    <ueab:WriteCellX DisplayName="Write Euro" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="WriteCellX_2">
+                      <ueab:WriteCellX.Cell>
+                        <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                          <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">Excel.Sheet["Hoja1"].Cell["A2"]</CSharpValue>
+                        </InArgument>
+                      </ueab:WriteCellX.Cell>
+                      <ueab:WriteCellX.Value>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">"Euro Value: "+ srtEuro</CSharpValue>
+                        </InArgument>
+                      </ueab:WriteCellX.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:WriteCellX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ueab:ExcelProcessScopeX>
   </Sequence>
 </Activity>
